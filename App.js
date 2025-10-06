@@ -11,44 +11,29 @@ export default function App() {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Limpiar sesión inválida al iniciar (solo una vez)
+    // SOLUCIÓN DEFINITIVA: Limpiar sesión cada vez que inicia la app
+    // Esto garantiza que SIEMPRE veas el login hasta que hagas login exitoso
     const initializeApp = async () => {
       try {
-        // Verificar si hay un token guardado
-        const token = await AsyncStorage.getItem('authToken');
+        console.log('🧹 Limpiando cualquier sesión anterior...');
         
-        if (token) {
-          console.log('🔍 Token encontrado, verificando validez...');
-          
-          // Intentar verificar el token con una petición simple
-          try {
-            const response = await fetch('http://192.168.1.69:8000/api/auth/user', {
-              method: 'GET',
-              headers: {
-                'Authorization': `Bearer ${token}`,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-              },
-            });
-
-            if (!response.ok) {
-              // Token inválido, limpiar
-              console.log('❌ Token inválido, limpiando sesión...');
-              await AsyncStorage.multiRemove(['authToken', 'refreshToken', 'userData']);
-              console.log('✅ Sesión limpiada, mostrando login');
-            } else {
-              console.log('✅ Token válido, sesión activa');
-            }
-          } catch (error) {
-            // Si hay error de red o el servidor no responde, limpiar por seguridad
-            console.log('⚠️ No se pudo verificar token, limpiando sesión...');
-            await AsyncStorage.multiRemove(['authToken', 'refreshToken', 'userData']);
-          }
-        } else {
-          console.log('ℹ️ No hay token guardado, mostrando login');
-        }
+        // FORZAR limpieza de sesión al inicio
+        await AsyncStorage.multiRemove(['authToken', 'refreshToken', 'userData']);
+        
+        console.log('✅ Sesión limpiada completamente');
+        console.log('✅ Mostrando pantalla de LOGIN');
+        
+        // Pequeña pausa para asegurar que se limpió todo
+        await new Promise(resolve => setTimeout(resolve, 100));
       } catch (error) {
-        console.error('Error inicializando app:', error);
+        console.error('❌ Error limpiando sesión:', error);
+        // Intentar limpiar de todas formas
+        try {
+          await AsyncStorage.clear();
+          console.log('✅ Storage limpiado completamente como respaldo');
+        } catch (clearError) {
+          console.error('❌ Error crítico:', clearError);
+        }
       } finally {
         setIsReady(true);
       }

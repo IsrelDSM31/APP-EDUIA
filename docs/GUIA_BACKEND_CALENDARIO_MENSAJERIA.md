@@ -560,3 +560,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
 **✨ Los servicios están correctamente configurados y listos para usar en cuanto implementes estos endpoints ✨**
 
+
+
+

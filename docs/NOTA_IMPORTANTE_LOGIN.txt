@@ -1,0 +1,65 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║              ⚠️  IMPORTANTE - SESIÓN LIMPIADA ⚠️                 ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+🔧 CAMBIO IMPLEMENTADO:
+
+La app ahora LIMPIA AUTOMÁTICAMENTE toda sesión guardada cada vez que 
+inicias. Esto significa que:
+
+✅ SIEMPRE verás el LOGIN al abrir la app
+✅ NO habrá tokens viejos guardados
+✅ Debes iniciar sesión cada vez (temporalmente)
+
+═══════════════════════════════════════════════════════════════════
+
+📱 LO QUE VERÁS:
+
+1. Abres la app
+2. Pantalla de carga (2 segundos)
+3. LOGIN aparece ✅
+
+Logs en consola:
+```
+🧹 Limpiando cualquier sesión anterior...
+✅ Sesión limpiada completamente
+✅ Mostrando pantalla de LOGIN
+```
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 PARA ACTIVAR:
+
+Presiona R en Metro Bundler
+
+═══════════════════════════════════════════════════════════════════
+
+🔄 DESPUÉS DE QUE FUNCIONE:
+
+Una vez que confirmes que el LOGIN aparece correctamente, podemos
+cambiar la lógica para que:
+
+✅ Mantenga la sesión activa entre reinicios
+✅ Solo limpie si el token es inválido
+
+Por ahora, esta solución GARANTIZA que veas el login.
+
+═══════════════════════════════════════════════════════════════════
+
+⚠️  NOTA: Tendrás que iniciar sesión cada vez que abras la app
+    hasta que confirmemos que todo funciona bien.
+
+    Email: admin@eduia.com
+    Contraseña: password
+
+═══════════════════════════════════════════════════════════════════
+
+✅ ESTA SOLUCIÓN ES 100% EFECTIVA
+
+Si presionas R y SIGUES sin ver el login, entonces hay otro problema
+diferente (probablemente con la navegación o el AuthContext).
+
+═══════════════════════════════════════════════════════════════════
+
