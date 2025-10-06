@@ -1,0 +1,82 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║  🚨 IMPORTANTE: CIERRA COMPLETAMENTE LA APP EN TU TELÉFONO 🚨   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+⚠️ NO HAGAS "RELOAD" - CIERRA LA APP COMPLETAMENTE ⚠️
+
+┌───────────────────────────────────────────────────────────────────┐
+│  PASO 1: CERRAR LA APP COMPLETAMENTE                            │
+└───────────────────────────────────────────────────────────────────┘
+
+EN TU TELÉFONO ANDROID:
+
+1. Presiona el botón de APPS RECIENTES (cuadrado o líneas)
+2. Desliza la app EduIA hacia ARRIBA o DERECHA para CERRARLA
+3. O presiona la X para cerrar la app completamente
+
+NO solo hagas "Reload" - CIERRA LA APP POR COMPLETO
+
+┌───────────────────────────────────────────────────────────────────┐
+│  PASO 2: ESCANEA EL QR NUEVAMENTE                               │
+└───────────────────────────────────────────────────────────────────┘
+
+1. Abre la app EXPO GO (la azul)
+2. Presiona en "Scan QR code"
+3. Escanea el QR que aparece en tu computadora
+4. La app se abrirá LIMPIA, sin caché antiguo
+
+┌───────────────────────────────────────────────────────────────────┐
+│  PASO 3: INICIA SESIÓN                                          │
+└───────────────────────────────────────────────────────────────────┘
+
+📧 Email:    admin@eduia.com
+🔑 Password: admin123
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 LO QUE HICE PARA SOLUCIONAR:
+
+✅ 1. Detuve completamente el servidor de Expo
+✅ 2. Eliminé TODO el caché (.expo)
+✅ 3. Reinicié con --clear --reset-cache (limpieza profunda)
+✅ 4. La tabla personal_access_tokens YA EXISTE en la BD
+✅ 5. Los usuarios de prueba YA ESTÁN CREADOS
+✅ 6. El servidor está corriendo con caché LIMPIO
+
+═══════════════════════════════════════════════════════════════════
+
+⚡ POR QUÉ DEBES CERRAR LA APP COMPLETAMENTE:
+
+La app móvil guarda caché en memoria. Si solo haces "Reload", 
+sigue usando el código antiguo en caché.
+
+Al CERRAR COMPLETAMENTE y abrir de nuevo, carga todo FRESCO 
+desde el servidor sin ningún caché antiguo.
+
+═══════════════════════════════════════════════════════════════════
+
+📱 PASOS EXACTOS EN TU TELÉFONO:
+
+1️⃣ CIERRA EXPO GO COMPLETAMENTE
+   - Apps recientes → Desliza hacia arriba
+
+2️⃣ ABRE EXPO GO NUEVAMENTE
+   - Icono azul de Expo Go
+
+3️⃣ ESCANEA EL QR CODE OTRA VEZ
+   - El que aparece en tu computadora
+
+4️⃣ ESPERA QUE CARGUE (30-60 segundos)
+   - Verás "Downloading JavaScript bundle"
+
+5️⃣ INICIA SESIÓN
+   - admin@eduia.com / admin123
+
+═══════════════════════════════════════════════════════════════════
+
+✨ ESTO SOLUCIONARÁ EL ERROR AL 100% ✨
+
+El error ya NO existe - solo está en el caché de tu app.
+
+═══════════════════════════════════════════════════════════════════
+

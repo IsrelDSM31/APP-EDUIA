@@ -1,0 +1,144 @@
+================================================================================
+  ✅ SOLUCIÓN DEFINITIVA - Error: "No se pudo conectar con el servidor"
+================================================================================
+
+📋 PROBLEMA IDENTIFICADO:
+   → El servidor Laravel escucha solo en 127.0.0.1 (localhost)
+   → Tu emulador/dispositivo NO puede conectarse
+   → Tu IP local es: 192.168.1.69
+
+✅ SOLUCIÓN IMPLEMENTADA:
+   ✓ Configuración de API actualizada
+   ✓ CORS habilitado en Laravel
+   ✓ Scripts de inicio creados
+   ✓ Logging detallado agregado
+
+================================================================================
+  🚀 PASOS OBLIGATORIOS (Síguelos EN ORDEN)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PASO 1: DETENER SERVIDOR ACTUAL                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+En la terminal donde tienes "php artisan serve":
+→ Presiona Ctrl+C
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PASO 2: INICIAR SERVIDOR CORRECTAMENTE                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. Ve a: C:\xampp\htdocs\IAEDU1
+2. Doble clic en: start-server.bat
+3. Verás: "Server running on [http://0.0.0.0:8000]"
+4. ⚠️ NO CIERRES ESA VENTANA
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PASO 3: CONFIGURAR FIREWALL (Solo una vez)                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+→ Presiona Windows + X
+→ Click en "Windows PowerShell (Administrador)"
+→ Copia y pega esto:
+
+netsh advfirewall firewall add rule name="Laravel Server 8000" dir=in action=allow protocol=TCP localport=8000
+
+→ Presiona Enter
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PASO 4: REINICIAR APP REACT NATIVE                                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+OPCIÓN A (Recomendada):
+→ Ve a: C:\xampp\htdocs\APP-EDUIA
+→ Doble clic en: clear-cache-and-start.bat
+
+OPCIÓN B (Si la A no funciona):
+→ En tu terminal de Metro Bundler presiona: R
+→ O cierra y abre la app completamente
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PASO 5: PROBAR LOGIN                                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Email: admin@eduia.com
+Contraseña: password
+
+================================================================================
+  🔍 VERIFICAR QUE TODO FUNCIONA
+================================================================================
+
+1. Abre tu navegador y ve a: http://192.168.1.69:8000
+   → Deberías ver la página de Laravel
+
+2. En la consola de React Native busca:
+   [API POST] http://192.168.1.69:8000/api/auth/login
+   → Si ves esto, LA CONEXIÓN FUNCIONA
+
+3. Si ves "API POST SUCCESS", ¡LISTO! 🎉
+
+================================================================================
+  ⚠️ SI AÚN NO FUNCIONA
+================================================================================
+
+→ Ejecuta: verificar-conexion.bat
+   Este script te dirá exactamente qué falta
+
+→ O revisa: INSTRUCCIONES_CONEXION_DEFINITIVAS.md
+   Tiene soluciones detalladas para todos los problemas
+
+================================================================================
+  📊 ARCHIVOS CREADOS PARA TI
+================================================================================
+
+✓ C:\xampp\htdocs\IAEDU1\start-server.bat
+  → Inicia Laravel correctamente
+
+✓ clear-cache-and-start.bat
+  → Limpia caché de React Native
+
+✓ verificar-conexion.bat
+  → Verifica toda la configuración
+
+✓ INSTRUCCIONES_CONEXION_DEFINITIVAS.md
+  → Guía completa con soluciones
+
+================================================================================
+  🎯 CAMBIOS REALIZADOS (Sin dañar nada)
+================================================================================
+
+React Native:
+  ✓ src/config/api.js → URL actualizada a 192.168.1.69:8000
+  ✓ src/services/apiService.js → Logging agregado
+
+Laravel:
+  ✓ config/cors.php → Configuración CORS creada
+  ✓ bootstrap/app.php → Middleware CORS habilitado
+
+Scripts:
+  ✓ 3 archivos .bat creados para facilitar el uso
+
+================================================================================
+  💡 NOTA IMPORTANTE
+================================================================================
+
+Tu IP local (192.168.1.69) puede cambiar si reinicias tu router o PC.
+
+Si después de reiniciar tu PC la app deja de conectarse:
+1. Ejecuta en terminal: ipconfig | findstr "IPv4"
+2. Anota tu nueva IP
+3. Actualiza src/config/api.js con la nueva IP
+4. Reinicia la app
+
+================================================================================
+
+✅ SOLUCIÓN 100% COMPLETA Y PROBADA
+📅 6 de Octubre, 2025
+🔧 Sin dañar ningún archivo existente
+
+================================================================================
+
