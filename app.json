@@ -17,6 +17,11 @@
     "android": {
       "package": "com.eduia.app",
       "backgroundColor": "#6200EE"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "881edf57-0290-42b5-8cd2-d8145ed2b39f"
+      }
     }
   }
 }
