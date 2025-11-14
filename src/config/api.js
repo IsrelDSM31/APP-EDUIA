@@ -2,7 +2,9 @@
 export const API_CONFIG = {
   // before production
   // BASE_URL: 'http://192.168.1.69:8000/api', // IP local de tu PC - funciona para emulador y dispositivo físico
-  BASE_URL: 'https://eduia.on-forge.com/api', // IP local de tu PC - funciona para emulador y dispositivo físico
+
+  // BASE_URL: 'https://eduia.on-forge.com/api', // IP local de tu PC - funciona para emulador y dispositivo físico
+  BASE_URL: 'http://18.219.43.140/api', // url prod aws
   // BASE_URL: 'http://10.0.2.2:8000/api', // Solo para emulador Android (si la IP no funciona)
   // BASE_URL: 'http://localhost:8000/api', // Solo para web/iOS Simulator
   TIMEOUT: 30000,
